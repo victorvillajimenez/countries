@@ -2,6 +2,113 @@
   text-align: center;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  height: 2rem;
+  background-color: white;
+  border-bottom: 1px solid;
+  overflow: hidden;
+}
+
+.control-bar {
+  display: flex;
+}
+
+.query-results {
+  padding: 0 1rem;
+  align-content: center;
+}
+
+.select-widget {
+  padding: 0 1rem;
+}
+
+.custom-select {
+  height: 1.5rem;
+}
+
+.country-container {
+  margin: 0;
+  padding-block-start: 4rem;
+}
+
+.country-list {
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.country {
+  padding: 1rem;
+}
+
+.country-details {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.country-details-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 14rem;
+}
+
+.custom-list {
+  list-style-type: disc;
+  margin-block: 0;
+}
+
+.country-flag {
+  padding: 0;
+  border: 1px solid;
+  margin: 0 1rem;
+  box-shadow: 8px 8px 6px gray;
+}
+
+@media screen and ((max-width: 400px) or (orientation: portrait)) {
+  .header {
+    font-size: x-small;
+    flex-direction: column;
+    height: 4.5rem;
+    justify-content: space-between;
+    .query-results {
+      display: none;
+    }
+    .view-as-widget {
+      display: none;
+    }
+  }
+  .country-container {
+    padding-block-start: 6rem;
+  }
+  .country-details {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .country-details-left {
+    padding-top: 1rem;
+    text-align: justify;
+    align-items: flex-start;
+    .country-official {
+      text-align: center;
+    }
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -10,29 +117,5 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
